@@ -7,7 +7,7 @@ const Router = () => {
     const [theme, setTheme] = useState("dark");
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route path="/" element={<Home theme={theme} setTheme={setTheme} />} />
                 <Route path="/home" element={<Home theme={theme} setTheme={setTheme} />} />
