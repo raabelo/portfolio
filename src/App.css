@@ -1,0 +1,105 @@
+/* global styles */
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+div.theme-light{
+    background-color: var(--color-mediumwhite);
+    color: var(--color-mediumblack);
+}
+div.theme-dark{
+    background-color: var(--color-mediumblack);
+    color: var(--color-mediumwhite);
+}
+button.theme-light{
+    color: var(--color-mediumblack);
+}
+button.theme-dark{
+    color: var(--color-mediumwhite);
+}
+
+*::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-mediumblack); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-mediumwhite); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid var(--color-mediumblack); /* creates padding around scroll thumb */
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+::selection {
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (max-width: 769px) {
+    /* For mobile: */
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 50%;
+    }
+    .col-3 {
+        width: calc(100% / 3);
+    }
+    .col-4 {
+        width: 25%;
+    }
+    .col-5 {
+        width: 20%;
+    }
+
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
+
+p,
+label {
+    cursor: default;
+}
+p,
+button,
+label,
+input {
+    font-family: var(--font-primary);
+    margin: 0;
+}
+
+img {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}

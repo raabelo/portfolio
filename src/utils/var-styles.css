@@ -1,0 +1,53 @@
+/* colors */
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-mediumwhite: #f7eff8;
+    --color-mediumblack: #25262a;
+    --color-lightblack: #7E808A;
+    --color-primary: #5e458f;
+    --color-secundary: #bd83c0;
+
+    /* tema */
+    --color-red: #ef2940;
+    --color-blue: #105ea9;
+    --color-yellow: #d7b044;
+    --color-green: #29f054;
+    --color-orange: #f06535;
+    --color-purple: #2e0046;
+}
+
+/* gradient */
+:root {
+    --gradient-primary: linear-gradient(90deg, #5E458F 0%, #BD83C0 98.55%);;
+    --gradient-primary-reverse: linear-gradient(-90deg, #00544d 0%, #30978f 100%);
+    --gradient-secundary: linear-gradient(90deg, #c09d5f 0%, #d5ae6a 100%);
+}
+
+/* shadows */
+:root {
+    --shadow-box: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    --shadow-button: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    --shadow-menu: 0px 0px 50px 10px rgba(0, 0, 0, 0.05);
+    --shadow-popup: 0px 0px 15px 1000px rgba(0, 0, 0, 0.5);
+}
+
+/* fonts */
+:root {
+    --font-primary: "Century Gothic", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* font size */
+:root {
+    --font-size-xx-small: 8px;
+    --font-size-x-small: 10px;
+    --font-size-small: 11px;
+    --font-size-normal: 12px;
+    --font-size-large: 13px;
+    --font-size-x-large: 14px;
+    --font-size-xx-large: 16px;
+    --font-size-xxx-large: 18px;
+    --font-size-xxxx-large: 24px;
+    --font-size-xxxxx-large: 32px;
+    --font-size-giant: 38px;
+}
