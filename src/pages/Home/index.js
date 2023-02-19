@@ -5,8 +5,8 @@ import React, { useEffect, useState, useRef } from "react";
 import "./styles.css";
 
 // assets
-import lightLogo from "../../assets/logos/light.png";
-import darkLogo from "../../assets/logos/dark.png";
+import lightLogo from "../../assets/logos/light.webp";
+import darkLogo from "../../assets/logos/dark.webp";
 
 // components
 import SwitchIcon from "../../components/ui/switch-icon";
@@ -20,8 +20,8 @@ import PagSobre from "../Sections/Sobre";
 import PagHabilidades from "../Sections/Habilidades";
 import PagContatos from "../Sections/Contatos";
 
-const Home = ({ theme = "dark", setTheme }) => {
-    const [switchTheme, setSwitchTheme] = useState(true);
+const Home = ({ theme, setTheme }) => {
+    const [switchTheme, setSwitchTheme] = useState(theme === "light" ? false : true);
     const [backtotop, setBacktotop] = useState(false);
 
     const secInicio = useRef(null);
@@ -50,8 +50,10 @@ const Home = ({ theme = "dark", setTheme }) => {
     useEffect(() => {
         if (switchTheme) {
             setTheme("dark");
+            localStorage.setItem("tema", "dark");
         } else {
             setTheme("light");
+            localStorage.setItem("tema", "light");
         }
     }, [switchTheme]);
 

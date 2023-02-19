@@ -24,7 +24,7 @@ const skills = [
     {
         name: "Node.js",
         icon: node,
-        desc: "A laryssinha é perfeita e eu amo minha neguinha"
+        desc: "A laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinhaA laryssinha é perfeita e eu amo minha neguinha"
     },
     {
         name: "HTML",

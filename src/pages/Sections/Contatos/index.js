@@ -1,9 +1,13 @@
 import React from "react";
+import "./styles.css";
+
+import { FaGithub, FaLinkedinIn, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const PagContatos = () => {
     const contacts = [
         {
             name: "E-mail",
+            icon: <FaEnvelope></FaEnvelope>,
             desc: "raabelo@hotmail.com",
             func: () => {
                 window.open("https://www.google.com.br/");
@@ -11,6 +15,7 @@ const PagContatos = () => {
         },
         {
             name: "Telefone",
+            icon: <FaPhone></FaPhone>,
             desc: "+55 27 998100177",
             func: () => {
                 window.open("https://api.whatsapp.com/send?phone=5527998100177");
@@ -18,6 +23,7 @@ const PagContatos = () => {
         },
         {
             name: "LinkedIn",
+            icon: <FaLinkedinIn></FaLinkedinIn>,
             desc: "Fabiano Rabelo",
             func: () => {
                 window.open("https://www.linkedin.com/in/raabelo/");
@@ -25,6 +31,7 @@ const PagContatos = () => {
         },
         {
             name: "GitHub",
+            icon: <FaGithub></FaGithub>,
             desc: "raabelo",
             func: () => {
                 window.open("https://github.com/raabelo/");
@@ -39,7 +46,9 @@ const PagContatos = () => {
                 {contacts.map((element, i) => {
                     return (
                         <button key={"contato-" + element.name} onClick={element.func}>
-                            {element.name}
+                            <div>{element.icon}</div>
+                            <p>{element.name}</p>
+                            <p>{element.desc}</p>
                         </button>
                     );
                 })}

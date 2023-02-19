@@ -1,0 +1,47 @@
+#section-contacts > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-contacts > div > button{
+    
+    margin: 20px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    transition: all 0.2s ease-in-out;
+}
+
+#section-contacts > div > button:hover{
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+}
+
+#section-contacts > div > button > div{
+    color: var(--color-mediumwhite);
+    font-size: var(--font-size-xxxxx-large);
+    cursor: pointer;
+    margin: 10px;
+    padding: 17.5px;
+    padding-bottom: 10px;
+    background-color: var(--color-secundary);
+    border-radius: 500px;
+}
+
+#section-contacts > div > button > p{
+    color: var(--color-lightblack);
+    margin: 5px;
+    cursor: pointer;
+}
+
+#section-contacts > div > button > p:not(p:last-child){
+    color: var(--color-mediumwhite);
+    font-size: var(--font-size-xx-large);
+    font-weight: bold;
+}

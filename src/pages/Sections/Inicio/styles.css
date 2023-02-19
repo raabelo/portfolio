@@ -1,0 +1,56 @@
+
+#section-home {
+    display: flex;
+    flex-direction: row;
+    height: 78.5vh;
+}
+
+#section-home > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#section-home > div:first-child {
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#section-home > div > div:first-child {
+    font-size: var(--font-size-giant);
+    margin-bottom: 25px;
+}
+#section-home > div > div:first-child > p:first-child {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: 0.05em; /* Adjust as needed */
+    -webkit-animation: typing 2.5s steps(40, end);
+    animation: typing 2.5s steps(40, end);
+}
+#section-home > div > div:first-child > p.p-name {
+    opacity: 0;
+    color: var(--color-primary);
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: 0.05em; /* Adjust as needed */
+    -webkit-animation: typing 2.5s steps(40, end);
+    animation: typing 2.5s steps(40, end), opacityshow 0.1s infinite;
+    animation-delay: 1.25s;
+}
+
+
+
+#section-home > div > div:last-child {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+
+.btn-wrapper-home {
+    width: 150px;
+    height: 30px;
+    margin-right: 50px;
+}

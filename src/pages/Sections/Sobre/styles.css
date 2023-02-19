@@ -1,0 +1,14 @@
+#section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+#section-about > p:last-child {
+    line-height: 2;
+    color: var(--color-lightblack);
+}

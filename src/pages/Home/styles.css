@@ -16,7 +16,7 @@ main > div:not(div:first-child) {
 #btn-backtotop {
     position: fixed;
     bottom: 0;
-    right: 0;   
+    right: 0;
     margin: 20px;
     width: 3vw;
     aspect-ratio: 1;
@@ -65,151 +65,11 @@ main > div:not(div:first-child) {
     cursor: pointer;
 }
 
-#section-home {
-    display: flex;
-    flex-direction: row;
-    height: 78.5vh;
-}
-
-#section-home > div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#section-home > div:first-child {
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-#section-home > div > div:first-child {
-    font-size: var(--font-size-giant);
-    margin-bottom: 25px;
-}
-#section-home > div > div:first-child > p:first-child {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: 0.05em; /* Adjust as needed */
-    -webkit-animation: typing 2.5s steps(40, end);
-    animation: typing 2.5s steps(40, end);
-}
-#section-home > div > div:first-child > p.p-name {
-    opacity: 0;
-    color: var(--color-primary);
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: 0.05em; /* Adjust as needed */
-    -webkit-animation: typing 2.5s steps(40, end);
-    animation: typing 2.5s steps(40, end), opacityshow 0.1s infinite;
-    animation-delay: 1.25s;
-}
-
-
-
-#section-home > div > div:last-child {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
-}
-
-.btn-wrapper-home {
-    width: 150px;
-    height: 30px;
-    margin-right: 50px;
-}
-
-
-
 section > p:first-child {
     text-align: center;
     font-size: var(--font-size-xxxx-large);
     font-weight: bold;
     margin-bottom: 25px;
-}
-
-#section-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 100px;
-}
-#section-about > p:last-child {
-    line-height: 2;
-    color: var(--color-lightblack);
-}
-
-#section-skills {
-    display: flex;
-    flex-direction: row;
-    height: 480px;
-}
-
-#section-skills > div {
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(4, 1fr);
-    flex: 1;
-}
-#section-skills > div:first-child {
-    flex: 1.5;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#section-skills > div:first-child > p:first-child {
-    text-align: left;
-    font-size: var(--font-size-xxxx-large);
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-#section-skills > div:first-child > p:last-child {
-    line-height: 2;
-    color: var(--color-lightblack);
-    transition: all 0.1s ease-in-out;
-}
-
-#section-skills > div > div {
-    width: 100px;
-    aspect-ratio: 1;
-    background-color: var(--color-halfblack);
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 7.5px;
-    box-sizing: border-box;
-    transition: all 0.25s ease-in-out;
-    border: 1px solid var(--color-halfblack);
-}
-
-#section-skills > div > div:hover {
-    transform: scale(1.175);
-    border: 1px solid var(--color-primary);
-    transition: all 0.25s ease-in-out;
-}
-
-#section-skills > div > div > p {
-    color: var(--color-primary);
-    font-weight: bold;
-    margin-bottom: 2px;
-    transition: all 0.25s ease-in-out;
-}
-
-#section-skills > div > div > img {
-    aspect-ratio: 1;
-    margin-bottom: 2px;
-    object-fit: contain;
-    transition: all 0.25s ease-in-out;
 }
 
 .pipe {
