@@ -34,7 +34,7 @@
 
 /* fonts */
 :root {
-    --font-primary: "Century Gothic", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --font-primary: "Century Gothic", "Poppins", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* font size */
