@@ -119,7 +119,7 @@ const Home = ({ theme = "dark", setTheme }) => {
                 </header>
                 <main>
                     <div ref={secInicio}>
-                        <PagInicio theme={theme}></PagInicio>
+                        <PagInicio theme={theme} contatos={secContatos}></PagInicio>
                     </div>
                     <div ref={secSobre}>
                         <PagSobre id={"sec-sobre"}></PagSobre>

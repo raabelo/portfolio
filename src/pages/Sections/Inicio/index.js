@@ -2,7 +2,7 @@ import React from "react";
 
 import ButtonWord from "../../../components/ui/button-word";
 
-const PagInicio = ({ theme = "dark" }) => {
+const PagInicio = ({ theme = "dark", contatos }) => {
     return (
         <section id="section-home">
             <div>
@@ -24,6 +24,11 @@ const PagInicio = ({ theme = "dark" }) => {
                 <div>
                     <div className="btn-wrapper-home">
                         <ButtonWord
+                            click={() => {
+                                window.open(
+                                    "https://drive.google.com/uc?id=1j1qXWTBr54nWmZF_wH060jWchkkQ-J0A&export=download"
+                                );
+                            }}
                             pSize={"var(--font-size-large)"}
                             text="Download CV"
                             color={"var(--color-mediumwhite)"}
@@ -32,6 +37,9 @@ const PagInicio = ({ theme = "dark" }) => {
                     </div>
                     <div className="btn-wrapper-home">
                         <ButtonWord
+                            click={() => {
+                                contatos.current?.scrollIntoView({ behavior: "smooth" });
+                            }}
                             pSize={"var(--font-size-large)"}
                             color={
                                 theme === "light"
