@@ -4,7 +4,9 @@
     --color-black: #000;
     --color-mediumwhite: #f7eff8;
     --color-mediumblack: #25262a;
-    --color-lightblack: #7E808A;
+    --color-lightblack: #7e808a;
+    --color-halfblack: #303136;
+    --color-halfwhite: #B7B0B8;
     --color-primary: #5e458f;
     --color-secundary: #bd83c0;
 
@@ -19,7 +21,7 @@
 
 /* gradient */
 :root {
-    --gradient-primary: linear-gradient(90deg, #5E458F 0%, #BD83C0 98.55%);;
+    --gradient-primary: linear-gradient(90deg, #5e458f 0%, #bd83c0 98.55%);
     --gradient-primary-reverse: linear-gradient(-90deg, #00544d 0%, #30978f 100%);
     --gradient-secundary: linear-gradient(90deg, #c09d5f 0%, #d5ae6a 100%);
 }

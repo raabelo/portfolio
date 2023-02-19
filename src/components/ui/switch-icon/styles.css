@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #B7B0B8;
+    background-color: var(--color-halfwhite);
     -webkit-transition: 0.2s;
     transition: 0.2s;
 }

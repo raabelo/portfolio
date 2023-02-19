@@ -19,10 +19,12 @@ const skills = [
     {
         name: "React.js",
         icon: react,
+        desc: "React é uma framewoekrwopsadjaklsjdklajsdkljaklsjd"
     },
     {
         name: "Node.js",
         icon: node,
+        desc: "A laryssinha é perfeita e eu amo minha neguinha"
     },
     {
         name: "HTML",
@@ -67,10 +69,6 @@ const skills = [
     {
         name: "Photoshop",
         icon: photoshop,
-    },
-    {
-        name: "React Native",
-        icon: react,
     },
     {
         name: "Redux",
