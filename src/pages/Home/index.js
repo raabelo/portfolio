@@ -1,7 +1,7 @@
 // --------------------- HOME ---------------------
 
 // imports
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./styles.css";
 
 // assets
@@ -22,6 +22,30 @@ import PagContatos from "../Sections/Contatos";
 
 const Home = ({ theme = "dark", setTheme }) => {
     const [switchTheme, setSwitchTheme] = useState(true);
+    const [backtotop, setBacktotop] = useState(false);
+
+    const secInicio = useRef(null);
+    const secSobre = useRef(null);
+    const secHabilidades = useRef(null);
+    const secProjetos = useRef(null);
+    const secContatos = useRef(null);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                setBacktotop(true);
+            } else {
+                setBacktotop(false);
+            }
+        });
+    }, []);
+
+    const scrollAction = (y) => {
+        window.scrollTo({
+            top: y,
+            behavior: "smooth",
+        });
+    };
 
     useEffect(() => {
         if (switchTheme) {
@@ -34,31 +58,41 @@ const Home = ({ theme = "dark", setTheme }) => {
     const menuButtons = [
         {
             name: "Início",
-            func: () => {},
+            func: () => scrollAction(0),
         },
         {
             name: "Sobre mim",
-            func: () => {},
+            func: () => {
+                secSobre.current?.scrollIntoView({ behavior: "smooth" });
+            },
         },
         {
             name: "Habilidades",
-            func: () => {},
+            func: () => {
+                secHabilidades.current?.scrollIntoView({ behavior: "smooth" });
+            },
         },
         {
             name: "Projetos",
-            func: () => {},
+            func: () => {
+                secProjetos.current?.scrollIntoView({ behavior: "smooth" });
+            },
         },
         {
             name: "Contatos",
-            func: () => {},
+            func: () => {
+                secContatos.current?.scrollIntoView({ behavior: "smooth" });
+            },
         },
     ];
 
     return (
         <div className={"body-wrapper theme-" + theme}>
-            <button id="btn-backtotop">
-                <FontAwesomeIcon icon={faArrowUp} />
-            </button>
+            {backtotop && (
+                <button onClick={() => scrollAction(0)} id="btn-backtotop">
+                    <FontAwesomeIcon icon={faArrowUp} />
+                </button>
+            )}
             <div>
                 <header className={"header-menu"}>
                     <img
@@ -69,7 +103,11 @@ const Home = ({ theme = "dark", setTheme }) => {
                     <div className={"div-wrapper-menu"}>
                         {menuButtons.map((element, i) => {
                             return (
-                                <button key={"btn-" + element.name} className={"theme-" + theme}>
+                                <button
+                                    onClick={element.func}
+                                    key={"btn-" + element.name}
+                                    className={"theme-" + theme}
+                                >
                                     {element.name}
                                 </button>
                             );
@@ -80,10 +118,18 @@ const Home = ({ theme = "dark", setTheme }) => {
                     </div>
                 </header>
                 <main>
-                    <PagInicio theme={theme}></PagInicio>
-                    <PagSobre></PagSobre>
-                    <PagHabilidades theme={theme}></PagHabilidades>
-                    <PagContatos></PagContatos>                 
+                    <div ref={secInicio}>
+                        <PagInicio theme={theme}></PagInicio>
+                    </div>
+                    <div ref={secSobre}>
+                        <PagSobre id={"sec-sobre"}></PagSobre>
+                    </div>
+                    <div ref={secHabilidades}>
+                        <PagHabilidades theme={theme}></PagHabilidades>
+                    </div>
+                    <div ref={secContatos}>
+                        <PagContatos id={"sec-contatos"}></PagContatos>
+                    </div>
                 </main>
                 <footer></footer>
             </div>

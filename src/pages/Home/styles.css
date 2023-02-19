@@ -9,6 +9,10 @@
     padding-bottom: 50px;
 }
 
+main > div:not(div:first-child) {
+    padding-top: 20px;
+}
+
 #btn-backtotop {
     position: fixed;
     bottom: 0;

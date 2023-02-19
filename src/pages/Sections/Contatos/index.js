@@ -29,7 +29,7 @@ const PagContatos = () => {
             <p>Contatos</p>
             <div>
                 {contacts.map((element, i) => {
-                    return <button onClick={element.func}>{element.name}</button>;
+                    return <button key={"contato-"+element.name} onClick={element.func}>{element.name}</button>;
                 })}
             </div>
         </section>
