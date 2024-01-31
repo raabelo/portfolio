@@ -8,17 +8,9 @@ const PagContatos = () => {
         {
             name: "E-mail",
             icon: <FaEnvelope></FaEnvelope>,
-            desc: "raabelo@hotmail.com",
+            desc: "rabelo.fv@gmail.com",
             func: () => {
-                window.open("https://www.google.com.br/");
-            },
-        },
-        {
-            name: "Telefone",
-            icon: <FaPhone></FaPhone>,
-            desc: "+55 27 998100177",
-            func: () => {
-                window.open("https://api.whatsapp.com/send?phone=5527998100177");
+                window.location.href("mailto:rabelo.fv@gmail.com");
             },
         },
         {
@@ -41,7 +33,7 @@ const PagContatos = () => {
 
     return (
         <section id="section-contacts">
-            <p>Contatos</p>
+            <p>Contacts</p>
             <div>
                 {contacts.map((element, i) => {
                     return (

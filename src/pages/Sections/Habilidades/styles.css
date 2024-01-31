@@ -1,27 +1,57 @@
 #section-skills {
     display: flex;
-    flex-direction: row;
-    height: 480px;
+    /* flex-direction: row; */
     border-left: 2px solid var(--color-primary);
     border-image-slice: 1;
     border-image-source: linear-gradient(to top, var(--color-primary), var(--color-secundary));
-    padding-left: 25px;
 }
 
 #section-skills > div {
     display: grid;
     margin: auto;
-    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    /* background-color: red; */
+    grid-template-columns: 25% 25% 25% 25%;
     flex: 1;
 }
 #section-skills > div:first-child {
-    flex: 1.5;
-    height: 100%;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 #section-skills > div:last-child {
     height: 100%;
+}
+
+
+@media only screen and (max-width: 769px) {
+    #section-skills {
+        border: 0;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    #section-skills > div:first-child {
+        align-items: center;
+    }
+    #section-skills > div:first-child > p:last-child {
+        display: none;
+    }
+    #section-skills > div:last-child {
+        width: 100%;
+    }
+    #section-skills > div > div {
+        transform: scale(0.75);
+    }
+}
+@media only screen and (min-width: 768px) {
+    #section-skills {
+        flex-direction: row;
+        padding-left: 25px;
+    }
+    #section-skills > div:last-child > div {
+        margin-bottom: 1vw;
+    }
 }
 
 #section-skills > div:first-child > p:first-child {
@@ -56,6 +86,7 @@
     transform: scale(1.175);
     border: 1px solid var(--color-primary);
     transition: all 0.25s ease-in-out;
+    z-index: 90;
 }
 
 #section-skills > div > div > p {

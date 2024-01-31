@@ -3,20 +3,21 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
+    width: 100svw;
 }
 
-div.theme-light{
+div.theme-light {
     background-color: var(--color-mediumwhite);
     color: var(--color-mediumblack);
 }
-div.theme-dark{
+div.theme-dark {
     background-color: var(--color-mediumblack);
     color: var(--color-mediumwhite);
 }
-button.theme-light{
+button.theme-light {
     color: var(--color-mediumblack);
 }
-button.theme-dark{
+button.theme-dark {
     color: var(--color-mediumwhite);
 }
 
@@ -58,9 +59,26 @@ button.theme-dark{
     .desktop {
         display: none;
     }
+
+    .viewarea {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+
+    .viewarea {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
     .col-1 {
         width: 100%;
     }
@@ -76,26 +94,19 @@ button.theme-dark{
     .col-5 {
         width: 20%;
     }
-
-    .mobile {
-        display: none;
-    }
-    .desktop {
-        display: block;
-    }
 }
 
 p,
 label {
     cursor: default;
 }
+
 p,
 button,
 label,
 input {
     font-family: var(--font-primary);
     margin: 0;
-
 }
 
 img {

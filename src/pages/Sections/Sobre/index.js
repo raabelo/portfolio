@@ -3,14 +3,13 @@ import "./styles.css";
 
 const PagSobre = () => {
     return (
-        <section id="section-about">
-            <p>Sobre mim</p>
+        <section id="section-about" className="view-about">
+            <p>About me</p>
             <p>
-                {/* Desenvolvedor Front-end com experiência em React.js, Next.js, Redux, JavaScript,
-                TypeScript, Styled Components, Material UI e consumo de APIs REST. Apaixonado pelo
-                desenvolvimento de componentes reutilizáveis. Também possui experiência em projetos
-                gerenciados por Metodologias Ágeis. Formado em Sistemas de Informação e cursando
-                Especialização em Front-End na Digital House Brasil. */}
+                Full Stack Developer, and freelance professional. Experienced in creating websites
+                and applications, from the initial UX/UI design and prototyping stage to the
+                complete implementation of Front-End and Back-End. Specialize in developing web
+                applications with React JS and mobile apps with React Native.
             </p>
         </section>
     );

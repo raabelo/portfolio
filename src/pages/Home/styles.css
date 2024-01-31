@@ -3,9 +3,7 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    padding-top: 100px;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-top: 100px;    
     padding-bottom: 50px;
 }
 
@@ -18,13 +16,17 @@ main > div:not(div:first-child) {
     bottom: 0;
     right: 0;
     margin: 20px;
-    width: 3vw;
+    width: 25px;
     aspect-ratio: 1;
     border-radius: 500px;
     border: 0;
     color: var(--color-white);
-    background: var(--gradient-primary);
+    background: var(--gradient-primary-transverse);
     cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-menu {
@@ -37,7 +39,7 @@ main > div:not(div:first-child) {
     left: 0;
     right: 0;
     top: 0;
-    padding-top: 20px;
+    padding-top: 22.5px;
     padding-bottom: 12.5px;
     padding-left: 75px;
     padding-right: 75px;
@@ -46,6 +48,10 @@ main > div:not(div:first-child) {
 .div-wrapper-switch {
     margin-right: 0;
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .div-wrapper-menu {
@@ -82,4 +88,27 @@ section > p:first-child {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media only screen and (max-width: 769px) {
+    .header-menu {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 6.5vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding-top: 22.5px;
+        padding-bottom: 12.5px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
 }

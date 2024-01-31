@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 
 import skills from "../../../assets/docs/skills";
 
 const PagHabilidades = ({ theme = "dark" }) => {
-    
     const [skilldesc, setSkilldesc] = useState(-1);
 
     return (
         <section id="section-skills">
             <div>
-                <p>Habilidades</p>
+                <p>My Tech Stack</p>
                 <p
                     style={{
                         color:
@@ -25,7 +24,7 @@ const PagHabilidades = ({ theme = "dark" }) => {
                         ? skills[skilldesc].desc
                             ? skills[skilldesc].desc
                             : skills[skilldesc].name
-                        : "Passe o mouse sobre uma das ferramentas para ver sua descrição"}
+                        : "Hover an item to see its description"}
                 </p>
             </div>
             <div>

@@ -12,13 +12,19 @@ import darkLogo from "../../assets/logos/dark.webp";
 import SwitchIcon from "../../components/ui/switch-icon";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowUp,
+    faMoon as solidMoon,
+    faSun as solidSun,
+} from "@fortawesome/free-solid-svg-icons";
+import { faMoon as regularMoon, faSun as regularSun } from "@fortawesome/free-regular-svg-icons";
 
 // pages
 import PagInicio from "../Sections/Inicio";
 import PagSobre from "../Sections/Sobre";
 import PagHabilidades from "../Sections/Habilidades";
 import PagContatos from "../Sections/Contatos";
+import Contatos from "../../components/elements/contacts";
 
 const Home = ({ theme, setTheme }) => {
     const [switchTheme, setSwitchTheme] = useState(theme === "light" ? false : true);
@@ -59,29 +65,29 @@ const Home = ({ theme, setTheme }) => {
 
     const menuButtons = [
         {
-            name: "Início",
+            name: "Home",
             func: () => scrollAction(0),
         },
         {
-            name: "Sobre mim",
+            name: "About",
             func: () => {
                 secSobre.current?.scrollIntoView({ behavior: "smooth" });
             },
         },
         {
-            name: "Habilidades",
+            name: "Tech Stack",
             func: () => {
                 secHabilidades.current?.scrollIntoView({ behavior: "smooth" });
             },
         },
         {
-            name: "Projetos",
+            name: "Projects",
             func: () => {
                 secProjetos.current?.scrollIntoView({ behavior: "smooth" });
             },
         },
         {
-            name: "Contatos",
+            name: "Contact",
             func: () => {
                 secContatos.current?.scrollIntoView({ behavior: "smooth" });
             },
@@ -89,7 +95,7 @@ const Home = ({ theme, setTheme }) => {
     ];
 
     return (
-        <div className={"body-wrapper theme-" + theme}>
+        <div className={"body-wrapper viewarea theme-" + theme}>
             {backtotop && (
                 <button onClick={() => scrollAction(0)} id="btn-backtotop">
                     <FontAwesomeIcon icon={faArrowUp} />
@@ -116,7 +122,12 @@ const Home = ({ theme, setTheme }) => {
                         })}
                     </div>
                     <div className={"div-wrapper-switch"}>
+                        <FontAwesomeIcon icon={theme === "dark" ? regularSun : solidSun} />
                         <SwitchIcon check={switchTheme} setCheck={setSwitchTheme}></SwitchIcon>
+                        <FontAwesomeIcon icon={theme === "dark" ? solidMoon : regularMoon} />
+                    </div>
+                    <div>
+                        <Contatos />
                     </div>
                 </header>
                 <main>

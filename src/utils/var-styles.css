@@ -21,8 +21,8 @@
 
 /* gradient */
 :root {
-    --gradient-primary: linear-gradient(90deg, #5e458f 0%, #bd83c0 98.55%);
-    --gradient-primary-reverse: linear-gradient(-90deg, #00544d 0%, #30978f 100%);
+    --gradient-primary: linear-gradient(90deg, #5e458f 0%, #bd83c0 100%);
+    --gradient-primary-transverse: linear-gradient(180deg, #5e458f 0%, #bd83c0 100%);
     --gradient-secundary: linear-gradient(90deg, #c09d5f 0%, #d5ae6a 100%);
 }
 
@@ -51,5 +51,6 @@
     --font-size-xxx-large: 18px;
     --font-size-xxxx-large: 24px;
     --font-size-xxxxx-large: 32px;
+    --font-size-s-giant: 34px;
     --font-size-giant: 38px;
 }
